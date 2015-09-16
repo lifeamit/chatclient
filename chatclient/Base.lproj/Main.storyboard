@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +15,78 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5fD-Pe-Aqz">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NM0-IS-jVK">
+                                        <rect key="frame" x="150" y="50" width="300" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="7C4-zF-1r3"/>
+                                            <constraint firstAttribute="width" constant="300" id="QXA-hP-eCf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="QXA-hP-eCf"/>
+                                            </mask>
+                                        </variation>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WR0-si-LqP">
+                                        <rect key="frame" x="200" y="350" width="200" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="0b1-5p-oWf"/>
+                                            <constraint firstAttribute="height" constant="50" id="YaE-ST-bhT"/>
+                                        </constraints>
+                                        <state key="normal" title="Signin">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r2n-tm-WDF">
+                                        <rect key="frame" x="200" y="300" width="200" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Iwr-Sl-Sdb"/>
+                                            <constraint firstAttribute="width" constant="200" id="J5P-8V-pBh"/>
+                                        </constraints>
+                                        <state key="normal" title="Signup">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZUL-4s-EMn">
+                                        <rect key="frame" x="150" y="100" width="300" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="RsB-47-D1S"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="r2n-tm-WDF" firstAttribute="top" secondItem="5fD-Pe-Aqz" secondAttribute="top" constant="300" id="1DC-eY-9NY"/>
+                                    <constraint firstAttribute="centerX" secondItem="r2n-tm-WDF" secondAttribute="centerX" id="9wi-5y-LVk"/>
+                                    <constraint firstItem="WR0-si-LqP" firstAttribute="top" secondItem="5fD-Pe-Aqz" secondAttribute="top" constant="350" id="KJt-Kc-OVD"/>
+                                    <constraint firstItem="NM0-IS-jVK" firstAttribute="top" secondItem="5fD-Pe-Aqz" secondAttribute="top" constant="50" id="LVu-QZ-p0h"/>
+                                    <constraint firstItem="ZUL-4s-EMn" firstAttribute="top" secondItem="5fD-Pe-Aqz" secondAttribute="top" constant="100" id="UfP-mJ-Jah"/>
+                                    <constraint firstAttribute="centerX" secondItem="WR0-si-LqP" secondAttribute="centerX" id="d1y-U9-Lgz"/>
+                                    <constraint firstAttribute="centerX" secondItem="ZUL-4s-EMn" secondAttribute="centerX" id="tTJ-9C-MKt"/>
+                                    <constraint firstAttribute="centerX" secondItem="NM0-IS-jVK" secondAttribute="centerX" id="yqy-yK-2J1"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5fD-Pe-Aqz" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="BoC-Bn-Lgt"/>
+                            <constraint firstAttribute="trailing" secondItem="5fD-Pe-Aqz" secondAttribute="trailing" id="HbJ-Le-Kig"/>
+                            <constraint firstItem="5fD-Pe-Aqz" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="dt8-Vg-vTI"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="5fD-Pe-Aqz" secondAttribute="bottom" id="e1r-DQ-OgX"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="532" y="490"/>
         </scene>
     </scenes>
 </document>

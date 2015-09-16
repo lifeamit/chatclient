@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA5E9509C70EB8615F9A3FBC /* libPods-chatclient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8993C4A689BA3606A5843DFA /* libPods-chatclient.a */; };
 		F9E3F3931BA9FBC9001FF957 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E3F3921BA9FBC9001FF957 /* main.m */; };
 		F9E3F3961BA9FBC9001FF957 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E3F3951BA9FBC9001FF957 /* AppDelegate.m */; };
 		F9E3F3991BA9FBC9001FF957 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E3F3981BA9FBC9001FF957 /* ViewController.m */; };
@@ -27,6 +28,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8993C4A689BA3606A5843DFA /* libPods-chatclient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-chatclient.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5D9574D57738FDB57C8020A /* Pods-chatclient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chatclient.release.xcconfig"; path = "Pods/Target Support Files/Pods-chatclient/Pods-chatclient.release.xcconfig"; sourceTree = "<group>"; };
+		E888C5B16AC1A9CBA767B39E /* Pods-chatclient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chatclient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-chatclient/Pods-chatclient.debug.xcconfig"; sourceTree = "<group>"; };
 		F9E3F38D1BA9FBC9001FF957 /* chatclient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chatclient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9E3F3911BA9FBC9001FF957 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9E3F3921BA9FBC9001FF957 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -47,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA5E9509C70EB8615F9A3FBC /* libPods-chatclient.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +65,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C43DEE64D48EA95418577BB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E888C5B16AC1A9CBA767B39E /* Pods-chatclient.debug.xcconfig */,
+				E5D9574D57738FDB57C8020A /* Pods-chatclient.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		885A4B1B1341372BF875EEAE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8993C4A689BA3606A5843DFA /* libPods-chatclient.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F9E3F3841BA9FBC9001FF957 = {
 			isa = PBXGroup;
 			children = (
 				F9E3F38F1BA9FBC9001FF957 /* chatclient */,
 				F9E3F3A91BA9FBC9001FF957 /* chatclientTests */,
 				F9E3F38E1BA9FBC9001FF957 /* Products */,
+				4C43DEE64D48EA95418577BB /* Pods */,
+				885A4B1B1341372BF875EEAE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,9 +150,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F9E3F3B01BA9FBC9001FF957 /* Build configuration list for PBXNativeTarget "chatclient" */;
 			buildPhases = (
+				384EFA19613D8FBCAA17106C /* Check Pods Manifest.lock */,
 				F9E3F3891BA9FBC9001FF957 /* Sources */,
 				F9E3F38A1BA9FBC9001FF957 /* Frameworks */,
 				F9E3F38B1BA9FBC9001FF957 /* Resources */,
+				1B3D30BAA08CE66F48F02EC5 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -213,6 +239,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1B3D30BAA08CE66F48F02EC5 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-chatclient/Pods-chatclient-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		384EFA19613D8FBCAA17106C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F9E3F3891BA9FBC9001FF957 /* Sources */ = {
@@ -345,6 +404,7 @@
 		};
 		F9E3F3B11BA9FBC9001FF957 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E888C5B16AC1A9CBA767B39E /* Pods-chatclient.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = chatclient/Info.plist;
@@ -355,6 +415,7 @@
 		};
 		F9E3F3B21BA9FBC9001FF957 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5D9574D57738FDB57C8020A /* Pods-chatclient.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = chatclient/Info.plist;
@@ -416,6 +477,7 @@
 				F9E3F3B21BA9FBC9001FF957 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F9E3F3B31BA9FBC9001FF957 /* Build configuration list for PBXNativeTarget "chatclientTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +486,7 @@
 				F9E3F3B51BA9FBC9001FF957 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

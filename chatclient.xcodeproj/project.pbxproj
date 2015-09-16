@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CA5E9509C70EB8615F9A3FBC /* libPods-chatclient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8993C4A689BA3606A5843DFA /* libPods-chatclient.a */; };
 		F95899691BAA1193004B2E4C /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F95899681BAA1193004B2E4C /* ChatViewController.m */; };
+		F958996C1BAA1CAE004B2E4C /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F958996B1BAA1CAE004B2E4C /* CustomCell.m */; };
 		F9E3F3931BA9FBC9001FF957 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E3F3921BA9FBC9001FF957 /* main.m */; };
 		F9E3F3961BA9FBC9001FF957 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E3F3951BA9FBC9001FF957 /* AppDelegate.m */; };
 		F9E3F3991BA9FBC9001FF957 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E3F3981BA9FBC9001FF957 /* ViewController.m */; };
@@ -34,6 +35,8 @@
 		E888C5B16AC1A9CBA767B39E /* Pods-chatclient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chatclient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-chatclient/Pods-chatclient.debug.xcconfig"; sourceTree = "<group>"; };
 		F95899671BAA1193004B2E4C /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
 		F95899681BAA1193004B2E4C /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
+		F958996A1BAA1CAE004B2E4C /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
+		F958996B1BAA1CAE004B2E4C /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
 		F9E3F38D1BA9FBC9001FF957 /* chatclient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chatclient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9E3F3911BA9FBC9001FF957 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9E3F3921BA9FBC9001FF957 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -118,6 +121,8 @@
 				F9E3F3901BA9FBC9001FF957 /* Supporting Files */,
 				F95899671BAA1193004B2E4C /* ChatViewController.h */,
 				F95899681BAA1193004B2E4C /* ChatViewController.m */,
+				F958996A1BAA1CAE004B2E4C /* CustomCell.h */,
+				F958996B1BAA1CAE004B2E4C /* CustomCell.m */,
 			);
 			path = chatclient;
 			sourceTree = "<group>";
@@ -287,6 +292,7 @@
 				F9E3F3961BA9FBC9001FF957 /* AppDelegate.m in Sources */,
 				F95899691BAA1193004B2E4C /* ChatViewController.m in Sources */,
 				F9E3F3931BA9FBC9001FF957 /* main.m in Sources */,
+				F958996C1BAA1CAE004B2E4C /* CustomCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

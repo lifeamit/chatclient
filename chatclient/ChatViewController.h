@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 
-@interface ChatViewController : ViewController
+@interface ChatViewController : ViewController <UITableViewDataSource, UITableViewDelegate>
 @property (strong, nonatomic) IBOutlet UIView *chatView;
 @property (weak, nonatomic) IBOutlet UIView *chatChileView;
 @property (weak, nonatomic) IBOutlet UIButton *chatSendButton;

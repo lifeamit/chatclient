@@ -19,6 +19,14 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5fD-Pe-Aqz">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZUL-4s-EMn">
+                                        <rect key="frame" x="150" y="100" width="300" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="RsB-47-D1S"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NM0-IS-jVK">
                                         <rect key="frame" x="150" y="50" width="300" height="30"/>
                                         <constraints>
@@ -42,6 +50,10 @@
                                         <state key="normal" title="Signin">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="signinButtonTouch:" destination="vXZ-lx-hvc" eventType="touchDown" id="b8D-NO-sJ9"/>
+                                            <action selector="signinButtonTouch:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="kY6-1b-V4Y"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r2n-tm-WDF">
                                         <rect key="frame" x="200" y="300" width="200" height="50"/>
@@ -52,15 +64,10 @@
                                         <state key="normal" title="Signup">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="signupButtonTouch:" destination="vXZ-lx-hvc" eventType="touchDown" id="ujp-Rx-df0"/>
+                                        </connections>
                                     </button>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZUL-4s-EMn">
-                                        <rect key="frame" x="150" y="100" width="300" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="300" id="RsB-47-D1S"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -83,6 +90,13 @@
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="5fD-Pe-Aqz" secondAttribute="bottom" id="e1r-DQ-OgX"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="NM0-IS-jVK" id="rAV-cF-8D7"/>
+                        <outlet property="mainView" destination="5fD-Pe-Aqz" id="1kK-O0-Bdj"/>
+                        <outlet property="passwordField" destination="ZUL-4s-EMn" id="qsf-YD-PzR"/>
+                        <outlet property="signinButton" destination="WR0-si-LqP" id="WmX-fy-dls"/>
+                        <outlet property="signupButton" destination="r2n-tm-WDF" id="RUv-s9-qf9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

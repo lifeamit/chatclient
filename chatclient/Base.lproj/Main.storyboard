@@ -52,7 +52,6 @@
                                         </state>
                                         <connections>
                                             <action selector="signinButtonTouch:" destination="vXZ-lx-hvc" eventType="touchDown" id="b8D-NO-sJ9"/>
-                                            <action selector="signinButtonTouch:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="kY6-1b-V4Y"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r2n-tm-WDF">

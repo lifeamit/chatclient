@@ -30,7 +30,7 @@
 
 - (IBAction)signinButtonTouch:(UIButton *)sender {
     NSLog(@"signin button clicked");
-    [PFUser logInWithUsernameInBackground:@"myname" password:@"mypass"
+    [PFUser logInWithUsernameInBackground:self.emailField.text password:self.passwordField.text
                                     block:^(PFUser *user, NSError *error) {
                                         if (user) {
                                             // Do stuff after successful login.
@@ -47,12 +47,12 @@
 - (IBAction)signupButtonTouch:(UIButton *)sender {
     NSLog(@"signup button clicked");
     PFUser *user = [PFUser user];
-    user.username = @"my name";
-    user.password = @"my pass";
-    user.email = @"email@example.com";
+    user.username = self.emailField.text;
+    user.password = self.passwordField.text;
+    user.email = self.emailField.text;
     
     // other fields can be set just like with PFObject
-    user[@"phone"] = @"415-392-0202";
+//    user[@"phone"] = @"415-392-0202";
     
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {   // Hooray! Let them use the app now.

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="RNg-34-KV1">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -19,15 +20,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5fD-Pe-Aqz">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZUL-4s-EMn">
-                                        <rect key="frame" x="150" y="100" width="300" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="300" id="RsB-47-D1S"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NM0-IS-jVK">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="test@flickr.com" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NM0-IS-jVK">
                                         <rect key="frame" x="150" y="50" width="300" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="300" id="7C4-zF-1r3"/>
@@ -67,6 +60,14 @@
                                             <action selector="signupButtonTouch:" destination="vXZ-lx-hvc" eventType="touchDown" id="ujp-Rx-df0"/>
                                         </connections>
                                     </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="test" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZUL-4s-EMn">
+                                        <rect key="frame" x="150" y="100" width="300" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="RsB-47-D1S"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -89,15 +90,86 @@
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="5fD-Pe-Aqz" secondAttribute="bottom" id="e1r-DQ-OgX"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Rof-px-qwA"/>
                     <connections>
                         <outlet property="emailField" destination="NM0-IS-jVK" id="rAV-cF-8D7"/>
                         <outlet property="mainView" destination="5fD-Pe-Aqz" id="1kK-O0-Bdj"/>
                         <outlet property="passwordField" destination="ZUL-4s-EMn" id="qsf-YD-PzR"/>
                         <outlet property="signinButton" destination="WR0-si-LqP" id="WmX-fy-dls"/>
                         <outlet property="signupButton" destination="r2n-tm-WDF" id="RUv-s9-qf9"/>
+                        <segue destination="6Nv-Qb-0th" kind="show" identifier="com.yahoo.chatlist" id="AqK-U8-YZT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1344" y="490"/>
+        </scene>
+        <!--Chat View Controller-->
+        <scene sceneID="NCR-aa-XGn">
+            <objects>
+                <viewController id="6Nv-Qb-0th" customClass="ChatViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="l2B-tS-EYN"/>
+                        <viewControllerLayoutGuide type="bottom" id="dq6-rO-c9f"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3ec-H9-Fa3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ecu-rA-O7H">
+                                <rect key="frame" x="16" y="0.0" width="568" height="600"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="white message here" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oBE-68-Xvd">
+                                        <rect key="frame" x="38" y="162" width="150" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dCV-Gs-sdA">
+                                        <rect key="frame" x="61" y="255" width="102" height="30"/>
+                                        <state key="normal" title="Send Message">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="sendChatAction:" destination="6Nv-Qb-0th" eventType="touchDown" id="3tL-ED-2zK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ecu-rA-O7H" firstAttribute="top" secondItem="3ec-H9-Fa3" secondAttribute="topMargin" id="1O3-fa-Kxf"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Ecu-rA-O7H" secondAttribute="bottom" id="FX0-Cg-xvi"/>
+                            <constraint firstItem="Ecu-rA-O7H" firstAttribute="leading" secondItem="3ec-H9-Fa3" secondAttribute="leadingMargin" id="NOd-gJ-bKk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ecu-rA-O7H" secondAttribute="trailing" id="lkM-ek-26n"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="chatChileView" destination="Ecu-rA-O7H" id="sEl-T6-vMQ"/>
+                        <outlet property="chatInputField" destination="oBE-68-Xvd" id="sye-rk-4n8"/>
+                        <outlet property="chatSendButton" destination="dCV-Gs-sdA" id="sIV-ih-UNx"/>
+                        <outlet property="chatView" destination="3ec-H9-Fa3" id="NX8-Oe-BP6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Ee-ve-aQ7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2188" y="483"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zSg-W9-wCE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RNg-34-KV1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ctI-w7-ciG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="g17-tY-14p"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gxw-qu-lUG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="532" y="490"/>
         </scene>

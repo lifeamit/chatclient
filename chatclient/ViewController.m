@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import <Parse/Parse.h>
+#import "ChatViewController.h"
 
 @interface ViewController ()
 
@@ -35,9 +36,17 @@
                                         if (user) {
                                             // Do stuff after successful login.
                                             NSLog(@"Log: login success");
+                                            [self performSegueWithIdentifier:@"com.yahoo.chatlist" sender:self];
                                         } else {
                                             // The login failed. Check error to see why.
                                                                                         NSLog(@"Log: login error");
+                                            
+                                            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Do you want to say hello?"
+                                                                                            message:@"More info..."
+                                                                                           delegate:self
+                                                                                  cancelButtonTitle:@"Cancel"
+                                                                                  otherButtonTitles:@"Say Hello",nil];
+                                            [alert show];
                                         }
                                     }];
 

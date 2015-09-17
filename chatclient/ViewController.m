@@ -41,8 +41,8 @@
                                             // The login failed. Check error to see why.
                                                                                         NSLog(@"Log: login error");
                                             
-                                            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Do you want to say hello?"
-                                                                                            message:@"More info..."
+                                            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Login error?"
+                                                                                            message:@"Incorrect username or password"
                                                                                            delegate:self
                                                                                   cancelButtonTitle:@"Cancel"
                                                                                   otherButtonTitles:@"Say Hello",nil];

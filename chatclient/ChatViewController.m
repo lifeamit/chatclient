@@ -52,7 +52,7 @@
 //        cell.textLabel.text = message[@"user"];
 //    }
 
-    cell.textLabel.text = [NSString stringWithFormat:@"%@:  %@", message[@"user"], message[@"text"]];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@", message[@"text"]];
     
     return cell;
 }
